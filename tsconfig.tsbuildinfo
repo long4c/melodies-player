@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/lib/abccodec.ts","./src/lib/abcmeta.ts","./src/pages/homepage.tsx","./src/pages/melodypage.tsx"],"version":"5.8.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/lib/abccodec.ts","./src/lib/abcmeta.ts","./src/lib/firebase.ts","./src/lib/savedmelodies.ts","./src/pages/homepage.tsx","./src/pages/melodypage.tsx","./src/pages/savedmelodiespage.tsx"],"version":"5.8.3"}
