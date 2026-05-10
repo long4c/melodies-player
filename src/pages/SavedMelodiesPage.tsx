@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import {
   getFirebaseErrorMessage,
   isFirebaseConfigured,
+  missingFirebaseConfigKeys,
   signInWithGoogle,
   signOut,
   watchAuth,
@@ -199,7 +200,7 @@ export default function SavedMelodiesPage() {
       {!isFirebaseConfigured ? (
         <section className="workspace">
           <p className="error-message" role="alert">
-            Firebase config is missing. Add your Firebase web app keys to .env and restart the dev server.
+            Firebase config is missing: {missingFirebaseConfigKeys.join(', ')}
           </p>
         </section>
       ) : null}

@@ -6,6 +6,7 @@ import { extractAbcMetadata } from '../lib/abcMeta';
 import {
   getFirebaseErrorMessage,
   isFirebaseConfigured,
+  missingFirebaseConfigKeys,
   signInWithGoogle,
   watchAuth,
   type User,
@@ -128,7 +129,7 @@ export default function MelodyPage() {
 
   async function saveCurrentMelody() {
     if (!isFirebaseConfigured) {
-      setCopyMessage('Firebase config is missing. Add your project keys to .env first.');
+      setCopyMessage(`Firebase config is missing: ${missingFirebaseConfigKeys.join(', ')}`);
       return;
     }
 

@@ -29,6 +29,9 @@ const requiredFirebaseConfig = {
 };
 
 export const isFirebaseConfigured = Object.values(requiredFirebaseConfig).every(Boolean);
+export const missingFirebaseConfigKeys = Object.entries(requiredFirebaseConfig)
+  .filter(([, value]) => !value)
+  .map(([key]) => key);
 
 let app: FirebaseApp | undefined;
 
